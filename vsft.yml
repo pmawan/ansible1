@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  tasks:
+  - name: check vsftpd
+    yum:
+     list: vsftpd
+    register: pkgg
+  - debug:
+    msg: "{{ pkgg }}"
