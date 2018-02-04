@@ -6,4 +6,4 @@
      list: vsftpd
     register: pkgg
   - debug:
-    msg: "{{ pkgg }}"
+     msg: "{{ pkgg }}"
