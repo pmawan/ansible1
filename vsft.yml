@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: 192.168.1.9
   tasks:
   - name: check vsftpd
     yum:
