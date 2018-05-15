@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+  - name: Check Installed Packages
+    command: rpm -qa
+    register: pkgg
+  - debug:
+     msg: "{{ pkgg }}"
