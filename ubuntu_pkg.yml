@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+  - name: Check Installed Packages
+    command: apt list
+    register: pkgg
+  - debug:
+     msg: "{{ pkgg }}"
