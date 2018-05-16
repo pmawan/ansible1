@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Check Installed Packages
+    command: yum list ntp
+    register: output
+  - name: Install if NTP is not installed
+    command: yum install ntp -y
+    when: output.stdout.find('Available Packages') != -1
